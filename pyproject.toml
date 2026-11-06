@@ -1,0 +1,30 @@
+[project]
+name = "icloud-mail"
+version = "0.1.0"
+description = "Claude Code skill that sends email from an iCloud Mail account"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/argoarsiks/icloud-mail"
+
+[dependency-groups]
+dev = [
+    "mypy>=2.4.1",
+    "ruff>=0.17.4",
+]
+
+[tool.ruff]
+line-length = 100
+src = ["src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "C4", "SIM", "RET", "PTH", "RUF"]
+
+[tool.mypy]
+strict = true
+files = ["src"]
+mypy_path = "src"
